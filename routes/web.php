@@ -19,4 +19,20 @@ Route::get('/sample', function () { // link to sample html localhost:8000/sample
     return view('sample'); // @Albert this is the sample html
 });
 
+Route::get('/preloginpage', function () { // link to sample html localhost:8000/sample
+    return view('preloginpage'); // @Albert this is the sample html
+});
+
+Route::get('/loginpage', function () { // link to sample html localhost:8000/sample
+    return view('loginpage'); // @Albert this is the sample html
+});
+
+Route::get('/registerpage', function () { // link to sample html localhost:8000/sample
+    return view('registerpage'); // @Albert this is the sample html
+});
+
+Route::get('/userpage', function () { // link to sample html localhost:8000/sample
+    return view('userpage'); // @Albert this is the sample html
+});
+
 Route::get('/testmap', "MapController@index");
