@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philam Life</title>
-   
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="{{ asset('template/font-awesome-4.5.0/css/font-awesome.min.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('template/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/slick/slick.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('template/slick/slick-theme.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/slick/slick.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('template/slick/slick-theme.css') }}"/>
     <link rel="stylesheet" href="{{ asset('template/css/tooplate-style.css') }}">
     <!-- tooplate style -->
 
@@ -23,7 +23,7 @@
 
         if (navigator.userAgent.indexOf('MSIE') !== -1
             || navigator.appVersion.indexOf('Trident/') > 0) {
-            
+
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
         }
@@ -34,63 +34,86 @@
 <body>
 
 <!-- Loader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-    </div>
-    <div class="container">
-        <section class="tm-section-head" id="top">
-            <header id="header" class="text-center tm-text-gray">
-                <div class = "header">
-                    <h1>Philam Life</h1>
-                </div>
-            </header>
-            <ul>                <!-- Papasok sa prelogin page lang -->
-                <li><a  href="#tm-section-1"><strong>HOME</strong></a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li style="float:right"><a href="#tm-section-3"><b>ABOUT US</b></a></li>
-            </ul>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<div class="container">
+    <section class="tm-section-head" id="top">
+        <header id="header" class="text-center tm-text-gray">
+            <div class="header">
+                <h1>Philam Life</h1>
+            </div>
+        </header>
+        <ul>                <!-- Papasok sa prelogin page lang -->
+            <li><a href="#tm-section-1"><strong>HOME</strong></a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li style="float:right"><a href="#tm-section-3"><b>ABOUT US</b></a></li>
+        </ul>
 
-            <section class="tm-section-6" id="tm-section-6">
-                    <div class="row">
-                        <div class="col-lg-7 col-md-7 col-xs-12">
-                            <div class="contact_message">
-                                <form action="" method="post" class="contact-form">
-                                    <div class="row mb-2">
-                                        <div class="form-group col-xl-6 tm-2col-r">
-                                            <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Firstname" required/>
-                                        </div>
-                                        <div class="form-group col-xl-6">
-                                            <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Lastname" required/>
-                                        </div>
-                                        <div class="form-group col-xl-6 tm-2col-r">
-                                                <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address" required/>
-                                        </div>
-                                        <div class="form-group col-xl-6">
-                                                <input type=""number"" id="contact_num" name="contact_num" class="form-control" placeholder="Contact Number" required/>
-                                        </div>
-                                        <div class="form-group col-xl-6 tm-2col-r">
-                                                <input type="text" id="gender" name="gender" class="form-control" placeholder="Gender" required/>
-                                        </div>
-                                        <div class="col-lg-5 col-md-5 col-xs-12">
-                                                <div class="form-group col-xl-6 pl-xl-1">
-                                                        <button type="submit" class="btn tm-btn-submit btn-big">Register</button>
-                                                </div>  
-                                         </div>
+        <section class="tm-section-6" id="tm-section-6">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-xs-12">
+                    <div class="contact_message">
+                            <form action="{{ route("register.store") }}" method="post" class="contact-form">
+                            {{ csrf_field() }}
+                            @if($errors->any())
+                                <ul>
+                                @foreach ($errors->all() as $message)
+                                    <li style="color:red">{{ $message }}</li>
+                                @endforeach
+                                </ul>
+                            @endif
+
+                            @if(session()->has('success-msg'))
+                                <p style="color:green">{!! session()->get('success-msg') !!}</p>
+                            @endif
+                            <div class="row mb-2">
+                                <div class="form-group col-xl-6 tm-2col-r">
+                                    <input type="text" id="first_name" name="first_name" class="form-control"
+                                           placeholder="Firstname" required/>
+                                </div>
+                                <div class="form-group col-xl-6">
+                                    <input type="text" id="last_name" name="last_name" class="form-control"
+                                           placeholder="Lastname" required/>
+                                </div>
+                                <div class="form-group col-xl-6 tm-2col-r">
+                                    <input type="email" id="email_address" name="email" class="form-control"
+                                           placeholder="Email Address" required/>
+                                </div>
+                                <div class="form-group col-xl-6">
+                                    <input type="number" id="contact_num" name="contact_number" class="form-control"
+                                           placeholder="Contact Number" required/>
+                                </div>
+                                <div class="form-group col-xl-6 tm-2col-r">
+                                    <select style="height: 55px" name="gender" id="gender" class="form-control">
+                                        <option value="">--Select Gender--</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-xl-6">
+                                    <input type="password" id="password" name="password" class="form-control"
+                                           placeholder="Password" required/>
+                                </div>
+                                <div class="col-lg-5 col-md-5 tm-2col-r">
+                                    <div class="form-group col-xl-6 pl-xl-1">
+                                        <button type="submit" class="btn tm-btn-submit btn-big">Register</button>
                                     </div>
-                                    
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-xs-12">
-                            <h2>Please fill up all the requirements needed for something big</h2>
-                        </div>  
-                        </div>
-                    </div>
-                </section>
 
-<!--INFORMATION -->
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-xs-12">
+                    <h2>Please fill up all the requirements needed for something big</h2>
+                </div>
+            </div>
+        </section>
+
+        <!--INFORMATION -->
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
             <div class="row">
                 <div class="col-lg-12">
@@ -104,11 +127,12 @@
                 </div>
             </div>
         </section>
-        
+
         <footer class="mt-5">
-           
+
         </footer>
-    </div>
+    </section>
+</div>
 
     <!-- load JS files -->
     <script type="text/javascript" src="{{ asset('template/js/jquery-1.11.3.min.js') }}"></script>
@@ -168,7 +192,7 @@
             // https://css-tricks.com/snippets/jquery/smooth-scrolling/
             // Select all links with hashes
             $('a[href*="#"]')
-                // Remove links that don't actually link to anything
+            // Remove links that don't actually link to anything
                 .not('[href="#"]')
                 .not('[href="#0"]')
                 .click(function (event) {
@@ -197,7 +221,8 @@
                                 } else {
                                     $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                                     $target.focus(); // Set focus again
-                                };
+                                }
+                                ;
                             });
                         }
                     }
@@ -206,5 +231,4 @@
     </script>
 
 </body>
-
 </html>
