@@ -18,3 +18,5 @@ Route::get('/', function () { // localhost:8000
 Route::get('/sample', function () { // link to sample html localhost:8000/sample
     return view('sample'); // @Albert this is the sample html
 });
+
+Route::get('/testmap', "MapController@index");
