@@ -42,12 +42,14 @@ Route::get('/modeofpayment', function () { // link to sample html localhost:8000
     
 });
 
-
 Route::get('/aboutuspage', function () { // link to sample html localhost:8000/sample
     return view('aboutuspage'); // @Albert this is the sample html
     
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
 Route::get('/testmap', "MapController@index");
 
