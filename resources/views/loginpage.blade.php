@@ -63,7 +63,7 @@
                                     @endif
                                     <div class="row mb-2">
                                         <div class="form-group col-xl-6 tm-2col-r">
-                                            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
+                                            <input type="text" id="email" name="email" class="form-control" placeholder="Email" required/>
                                         </div>
                                         <div class="form-group col-xl-6 pl-xl-1">
                                             <input type="password" id="password" name="password" class="form-control" placeholder="Password" required/>

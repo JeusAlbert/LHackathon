@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Validator;
 class UserLoginController
 {
     public function authenticate(Request $request) {
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('email', 'password');
 
         $validator = Validator::make($credentials, [
-            'username' => 'required|max:255',
+            'email' => 'required|max:255',
             'password' => 'required',
         ]);
 
-        if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Authentication passed...
             return redirect()->intended('userpage');
         }
