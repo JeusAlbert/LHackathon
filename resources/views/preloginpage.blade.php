@@ -54,19 +54,19 @@
             <div class="col-lg-12 tm-slider-col">
                 <div class="tm-img-slider">
                     <div class="tm-img-slider-item" href="template/img/gallery-img-01.jpg">
-                        <p class="tm-slider-caption">Image 1</p>
+                        <p class="tm-slider-caption">The family plants together grows together</p>
                         <img src="template/img/family.jpg" alt="Image" class="tm-slider-img">
                     </div>
                     <div class="tm-img-slider-item" href="template/img/hands.jpg">
-                        <p class="tm-slider-caption">Image 2</p>
+                        <p class="tm-slider-caption">Plant a TREE</p>
                         <img src="template/img/hands.jpg" alt="Image" class="tm-slider-img">
                     </div>
                     <div class="tm-img-slider-item" href="template/img/silo.jpg">
-                        <p class="tm-slider-caption">Image 3</p>
+                        <p class="tm-slider-caption">Take action for your hereafter</p>
                         <img src="template/img/silo.jpg" alt="Image" class="tm-slider-img">
                     </div>
                     <div class="tm-img-slider-item" href="template/img/black.jpg">
-                        <p class="tm-slider-caption">Image 4.</p>
+                        <p class="tm-slider-caption">Help a child today by providing them a clean environment.</p>
                         <img src="template/img/black.jpg" alt="Image" class="tm-slider-img">
                     </div>
                 </div>
@@ -78,20 +78,20 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="image">
-                        <img src="template/img/tm-img-1.jpg" class="img-fluid"/>
+                        <img src="template/img/soil.jpeg" class="img-fluid"/>
                     </div>
                     <div class="tm-box-3">
                         <h2>REWARDS</h2>
-                        <p> Earn points and get a discount to our partner stores.</p>
+                        <p> It's future proof initiative that will lead a bright path for the next generation.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                         <div class="image">
-                            <img src="template/img/tm-img-1.jpg" class="img-fluid"/>
+                            <img src="template/img/planting1.jpg" class="img-fluid"/>
                         </div>
                         <div class="tm-box-3">
-                            <h2>REWARDS</h2>
-                            <p> Earn points and get a discount to our partner stores.</p>
+                            <h2>BIGAY BUHAY</h2>
+                            <p> Tree Planting 2019. Build the future by building the environment</p>
                         </div>
                 </div>
             </div>

@@ -68,7 +68,7 @@
                                                 <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Email Address" required/>
                                         </div>
                                         <div class="form-group col-xl-6">
-                                                <input type=""number"" id="contact_num" name="contact_num" class="form-control" placeholder="Contact Number" required/>
+                                                <input type="number" id="contact_num" name="contact_num" class="form-control" placeholder="Contact Number" required/>
                                         </div>
                                         <div class="form-group col-xl-6 tm-2col-r">
                                                 <input type="text" id="gender" name="gender" class="form-control" placeholder="Gender" required/>

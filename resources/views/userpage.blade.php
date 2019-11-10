@@ -47,9 +47,12 @@
                 </div>
             </header>
             <ul>                <!-- Papasok sa prelogin page lang -->
-                    <li><a  href="#tm-section-1"><strong>HOME</strong></a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li style="float:right"><a href="#tm-section-3"><b>ABOUT US</b></a></li>
+                <li><a class="active" href=modeofpayment><strong>DONATE</strong></a></li>
+                <li><a  href="preloginpage"><strong>HOME</strong></a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li style="float:right"><a href="aboutuspage"><b>ABOUT US</b></a></li>
+                <li style="float:right"><a href="userpage"><b>MY ACCOUNT</b></a></li>
+                <li style="float:right"><a href="userpage"><b>DASHBOARD</b></a></li>
             </ul>
 <!--INFORMATION -->
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
@@ -57,15 +60,23 @@
                 <div class="col-lg-6 tm-2col-r">
                     <div class="image">
                         <img src="template/img/displaypicture.jpg" width="500" height="300"/>
-                        <h2>CONTRIBUTIONS</h2>
+                        <h2>NIELSEN BERNARDO</h2>
                     </div>
-                    <table style="width:50%">
+                    <table style="width:85%">
                             <br><tr>
                               <th><strong>ACHIEVEMENTS</strong></th>
                             </tr>
                             <tr>
-                              <td>Bill Gates</td>
-                              <td>55577854</td>
+                                <td>Donated a TREE</td>
+                            </tr>
+                            <tr>
+                                <td>Donated a TREE 2x</td>
+                            </tr>
+                            <tr>
+                                <td>VOLUNTEER</td>
+                            </tr>
+                            <tr>
+                                <td>POSTED A GREEN MESSAGE</td>
                             </tr>
                     </table>
                 </div>

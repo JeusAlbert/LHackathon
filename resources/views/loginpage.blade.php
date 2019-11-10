@@ -47,7 +47,7 @@
             <ul>                <!-- Header -->
                     <li><a  href="preloginpage"><strong>HOME</strong></a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li style="float:right"><a href=""><b>ABOUT US</b></a></li>
+                    <li><a style="float:right"><a href=aboutuspage><b>ABOUT US</b></a></li>
             </ul>
 <!-- Form -->
             <section class="tm-section-6" id="tm-section-6">
@@ -70,7 +70,6 @@
                                 </form>
                             </div>
                         </div>
-
                         <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
                             <div class="form-group col-xl-6 pl-xl-1">
                                     <button type="submit" class="btn tm-btn-submit btn-big">Log in</button>

@@ -36,4 +36,14 @@ Route::get('/userpage', function () { // link to sample html localhost:8000/samp
     return view('userpage'); // @Albert this is the sample html
 });
 
+Route::get('/modeofpayment', function () { // link to sample html localhost:8000/sample
+    return view('modeofpayment'); // @Albert this is the sample html
+    
+});
+
+Route::get('/aboutuspage', function () { // link to sample html localhost:8000/sample
+    return view('aboutuspage'); // @Albert this is the sample html
+    
+});
+
 
