@@ -19,7 +19,6 @@ Route::get('/sample', function () { // link to sample html localhost:8000/sample
     return view('sample'); // @Albert this is the sample html
 });
 
-
 Route::get('/preloginpage', function () { // link to sample html localhost:8000/sample
     return view('preloginpage'); // @Albert this is the sample html
 });
@@ -47,3 +46,4 @@ Route::get('/aboutuspage', function () { // link to sample html localhost:8000/s
 });
 
 
+Route::get('/testmap', "MapController@index");
