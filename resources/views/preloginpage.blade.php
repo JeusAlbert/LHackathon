@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philam Life</title>
-   
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="{{ asset('template/font-awesome-4.5.0/css/font-awesome.min.css') }}">
@@ -23,7 +23,7 @@
 
         if (navigator.userAgent.indexOf('MSIE') !== -1
             || navigator.appVersion.indexOf('Trident/') > 0) {
-            
+
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
         }
@@ -108,10 +108,8 @@
                         </address>
                     </div>
                 </div>
-            </div>
         </section>
         <footer class="mt-5">
-           
         </footer>
     </div>
 

@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,8 @@
 */
 
 Route::get('/', function () { // localhost:8000
-    return view('welcome');
+//    return view('welcome');
+    return view('preloginpage');
 });
 
 Route::get('/sample', function () { // link to sample html localhost:8000/sample
@@ -25,11 +27,11 @@ Route::get('/preloginpage', function () { // link to sample html localhost:8000/
 
 Route::get('/loginpage', function () { // link to sample html localhost:8000/sample
     return view('loginpage'); // @Albert this is the sample html
-});
+})->name('login.page');
 
 Route::get('/registerpage', function () { // link to sample html localhost:8000/sample
     return view('registerpage'); // @Albert this is the sample html
-});
+})->name('register.index');
 
 Route::get('/userpage', function () { // link to sample html localhost:8000/sample
     return view('userpage'); // @Albert this is the sample html
@@ -48,3 +50,7 @@ Route::get('/aboutuspage', function () { // link to sample html localhost:8000/s
 
 
 Route::get('/testmap', "MapController@index");
+
+Route::post('/register/store', "UserRegisterController@store")->name('register.store');
+
+Route::post('/authenticate', "UserLoginController@authenticate")->name('login.authenticate');
