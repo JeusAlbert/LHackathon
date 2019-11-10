@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philam Life</title>
-   
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <!-- Google web font "Open Sans" -->
     <link rel="stylesheet" href="{{ asset('template/font-awesome-4.5.0/css/font-awesome.min.css') }}">
@@ -23,7 +23,7 @@
 
         if (navigator.userAgent.indexOf('MSIE') !== -1
             || navigator.appVersion.indexOf('Trident/') > 0) {
-            
+
             alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
             renderPage = false;
         }
@@ -54,7 +54,13 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-7 col-xs-12">
                             <div class="contact_message">
-                                <form action="" method="post" class="contact-form">
+                                <form action="{{ route("login.authenticate") }}" id="login-btn" method="post" class="contact-form">
+                                    {{ csrf_field() }}
+                                    @if($errors->any())
+                                        @foreach ($errors->all() as $message)
+                                            <p style="color:red">{{ $message }}</p>
+                                        @endforeach
+                                    @endif
                                     <div class="row mb-2">
                                         <div class="form-group col-xl-6 tm-2col-r">
                                             <input type="text" id="username" name="username" class="form-control" placeholder="Username" required/>
@@ -62,25 +68,26 @@
                                         <div class="form-group col-xl-6 pl-xl-1">
                                             <input type="password" id="password" name="password" class="form-control" placeholder="Password" required/>
                                         </div>
-                                        <div class="form-g  roup col-xl-6 pl-xl-1">
-                                        
+                                        <div class="form-group col-xl-6 pl-xl-1">
                                         </div>
                                     </div>
-                                    
+
                                 </form>
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
                             <div class="form-group col-xl-6 pl-xl-1">
-                                    <button type="submit" class="btn tm-btn-submit btn-big">Log in</button>
-                            </div>  
+                                    <button type="submit" class="btn tm-btn-submit btn-big" onclick="document.getElementById('login-btn').submit()">Log in</button>
+                            </div>
                         </div>
-                    
+
                         <div class="col-lg-5 col-md-5 col-xs-12 tm-contact-right">
                                 <h2>Don't have an account yet? Register Now!</h2>
                                 <div class="form-group col-xl-6 pl-xl-1">
+                                    <form action="{{ route("register.index") }}" method="get">
                                         <button type="submit" href="registerpage" class="btn tm-btn-submit btn-big">Register</button>
-                                </div>  
+                                    </form>
+                                </div>
                             </div>
                     </div>
                 </section>
@@ -99,9 +106,9 @@
                 </div>
             </div>
         </section>
-        
+
         <footer class="mt-5">
-           
+
         </footer>
     </div>
 
