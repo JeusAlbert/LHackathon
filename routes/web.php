@@ -37,6 +37,10 @@ Route::get('/userpage', function () { // link to sample html localhost:8000/samp
     return view('userpage'); // @Albert this is the sample html
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
 Route::get('/testmap', "MapController@index");
 
 Route::post('/register/store', "UserRegisterController@store")->name('register.store');

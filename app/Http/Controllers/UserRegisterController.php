@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class UserRegisterController
@@ -32,7 +33,7 @@ class UserRegisterController
         $user->email = $request->email;
         $user->gender = $request->gender;
         $user->contact_number = $request->contact_number;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->save();
 
         return redirect()->back()->with("success-msg", "Registration Successful!");

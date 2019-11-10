@@ -57,9 +57,14 @@
                                 <form action="{{ route("login.authenticate") }}" id="login-btn" method="post" class="contact-form">
                                     {{ csrf_field() }}
                                     @if($errors->any())
+                                        <ul>
                                         @foreach ($errors->all() as $message)
-                                            <p style="color:red">{{ $message }}</p>
+                                            <li style="color:red">{{ $message }}</li>
                                         @endforeach
+                                        </ul>
+                                    @endif
+                                    @if(session()->has("login-failed"))
+                                        <p style="color:red">{{ session()->get("login-failed") }}</p>
                                     @endif
                                     <div class="row mb-2">
                                         <div class="form-group col-xl-6 tm-2col-r">
