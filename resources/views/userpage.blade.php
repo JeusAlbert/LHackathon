@@ -62,6 +62,7 @@
                         <img src="template/img/displaypicture.jpg" width="500" height="300"/>
                         <h2>NIELSEN BERNARDO</h2>
                     </div>
+                    
                     <table style="width:85%">
                             <br><tr>
                               <th><strong>ACHIEVEMENTS</strong></th>

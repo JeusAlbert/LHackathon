@@ -68,7 +68,7 @@
         <section class="tm-section-2 tm-section-mb" id="tm-section-2">
             <div class="row">
                 <div class="col-lg-12 tm-2col-r">
-                <h1>I WILL DONATE:</h1>
+                    <h1>I WILL DONATE:</h1>
                 <form action="/action_page.php">
                     <div class="container">    
                     <div id="accordion">

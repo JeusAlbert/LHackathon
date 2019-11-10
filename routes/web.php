@@ -40,6 +40,7 @@ Route::get('/modeofpayment', function () { // link to sample html localhost:8000
     
 });
 
+
 Route::get('/aboutuspage', function () { // link to sample html localhost:8000/sample
     return view('aboutuspage'); // @Albert this is the sample html
     
